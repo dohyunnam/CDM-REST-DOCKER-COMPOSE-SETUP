@@ -1,10 +1,10 @@
 # build
 
 ## prerequisites:
-### add ./restapi/keys.env with defined ```CLIENT_ID``` and ```CLIENT_SECRET```
+#### add ```./restapi/keys.env``` with defined ```CLIENT_ID``` and ```CLIENT_SECRET```
 
 ```
-#run
+#after keys.env is made, run 
 docker compose build
 docker compose up -d
 ```
