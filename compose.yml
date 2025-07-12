@@ -1,0 +1,16 @@
+services:
+  restapi:
+    build:
+      context: ./restapi
+      dockerfile: Dockerfile
+    container_name: CDM_RESTAPI
+    restart: always
+    ports: 
+      - 1241:1241
+    env_file: "./restapi/keys.env"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
