@@ -4,6 +4,10 @@ import httpx
 
 app = FastAPI()
 
+@app.get("/")
+async def hello_world():
+    return {"message": "Hello, World!"}
+
 @app.post("/get-token")
 async def get_token(request: Request):
     client_id = os.getenv("CLIENT_ID")
